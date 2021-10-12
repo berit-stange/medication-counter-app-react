@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
 
   //DATE
   const date = new Date();
-  // console.log(date.toString());
-  // document.getElementById("date").innerHTML = date;
   const displayTodaysDate = date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
 
   // BUTTONS
@@ -15,32 +13,34 @@ function App() {
   // changeColor.addEventListener('click', function () {
   //   btn.classList.toggle("change");
   // });
-  const clickHandlerMo = () => {
-    console.log('clicked morgens');
-    alert('clicked morgens');
+  const [switchToggled, setSwitchToggled] = useState(false);
+  const toggleSwitch = () => {
+    switchToggled ? setSwitchToggled(false) : setSwitchToggled(true);
+    console.log(switchToggled);
+    alert('Tablette morgens ist eingeworfen');
   };
 
-  const clickHandlerMi = () => {
-    console.log('clicked mittags');
-    alert('clicked morgens');
+  const [switchToggled2, setSwitchToggled2] = useState(false);
+  const toggleSwitch2 = () => {
+    switchToggled2 ? setSwitchToggled2(false) : setSwitchToggled2(true);
+    console.log(switchToggled2);
+    alert('Tablette mittags ist eingeworfen');
   };
 
-  const clickHandlerAb = () => {
-    console.log('clicked abends');
-    alert('clicked morgens');
+  const [switchToggled3, setSwitchToggled3] = useState(false);
+  const toggleSwitch3 = () => {
+    switchToggled3 ? setSwitchToggled3(false) : setSwitchToggled3(true);
+    console.log(switchToggled3);
+    alert('Tablette abends ist eingeworfen');
   };
 
-  // const btn2 = document.querySelector('.btn-noon');
-  // const changeColor2 = document.querySelector(".changeColor2");
-  // changeColor2.addEventListener('click', function () {
-  //   btn2.classList.toggle("change");
-  // });
+  // const clickHandlerMo = () => {
+  //   console.log('clicked mittags');
+  //   alert('clicked morgens');
+  // };
 
-  // const btn3 = document.querySelector('.btn-night');
-  // const changeColor3 = document.querySelector(".changeColor3");
-  // changeColor3.addEventListener('click', function () {
-  //   btn3.classList.toggle("change");
-  // });
+  // const [toggle, setToggle] = useState(true);
+
 
   return (
     <div>
@@ -53,9 +53,13 @@ function App() {
         </div>
 
         <div className="btn-container">
-          <button onClick={clickHandlerMo}>mo</button>
-          <button onClick={clickHandlerMi}>mi</button>
-          <button onClick={clickHandlerAb}>ab</button>
+          {/* <button onClick={clickHandlerMo}>mo</button> */}
+          <button className={switchToggled ? "changeColor" : ""} onClick={toggleSwitch}>mo</button>
+          {/* <button onClick={() => setToggle(!toggle)}>mo</button> */}
+          {/* <button onClick={clickHandlerMi}>mi</button> */}
+          <button className={switchToggled2 ? "changeColor" : ""} onClick={toggleSwitch2}>mi</button>
+          {/* <button onClick={clickHandlerAb}>ab</button> */}
+          <button className={switchToggled3 ? "changeColor" : ""} onClick={toggleSwitch3}>ab</button>
         </div>
       </div>
     </div>
