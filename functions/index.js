@@ -12,8 +12,16 @@ const functions = require('firebase-functions');
 const app = require('express')();
 
 const {
-    getAllMedication
+    getAllMedication,
+    postOneMedication,
+    deleteMedication,
+    editMedication
 } = require('./APIs/medication')
 
+// Medication
 app.get('/medication', getAllMedication);
+app.post('/type', postOneMedication);
+app.delete('/type/:medicationId', deleteMedication);
+app.put('/type/:medicationId', editMedication);
+
 exports.api = functions.https.onRequest(app);
