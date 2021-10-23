@@ -11,6 +11,7 @@
 const functions = require('firebase-functions');
 const app = require('express')();
 
+// import methods and after that assign routes to them
 const {
     getAllMedication,
     postOneMedication,
@@ -18,10 +19,19 @@ const {
     editMedication
 } = require('./APIs/medication')
 
+const {
+    loginUser,
+    signUpUser
+} = require('./APIs/users')
+
 // Medication
 app.get('/medication', getAllMedication);
 app.post('/type', postOneMedication);
 app.delete('/type/:medicationId', deleteMedication);
 app.put('/type/:medicationId', editMedication);
+
+// Users
+app.post('/login', loginUser);
+app.post('/signup', signUpUser);
 
 exports.api = functions.https.onRequest(app);
