@@ -32,4 +32,5 @@ firebase-debug.log*
 # firebase-debug.*.log*
 # **/firebase-debug.log
 
-config.js
+.firebaserc
+/functions/util/config.js
