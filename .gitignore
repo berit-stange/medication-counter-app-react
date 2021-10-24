@@ -24,8 +24,7 @@
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+
 
 # firebase-debug.log
 firebase-debug.log*
@@ -33,4 +32,4 @@ firebase-debug.log*
 # **/firebase-debug.log
 
 .firebaserc
-/functions/util/config.js
+functions/util/config.js
