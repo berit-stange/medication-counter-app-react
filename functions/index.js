@@ -22,7 +22,7 @@ const {
 const {
     loginUser,
     signUpUser,
-    getUserDetail
+    // getUserDetail
 } = require('./APIs/users')
 
 // Medication
@@ -34,6 +34,6 @@ app.put('/type/:medicationId', editMedication);
 // Users
 app.post('/login', loginUser);
 app.post('/signup', signUpUser);
-app.get('/user', auth, getUserDetail);
+// app.get('/user', auth, getUserDetail);
 
 exports.api = functions.https.onRequest(app);
