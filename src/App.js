@@ -5,7 +5,21 @@ function App() {
 
   //DATE
   const date = new Date();
-  const displayTodaysDate = date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear();
+  const month = new Array();
+  month[0] = "Januar";
+  month[1] = "Februar";
+  month[2] = "März";
+  month[3] = "April";
+  month[4] = "Mai";
+  month[5] = "Juni";
+  month[6] = "Juli";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "Oktober";
+  month[10] = "November";
+  month[11] = "Dezember";
+  let nameOfMonth = month[date.getMonth()];
+  const displayTodaysDate = date.getDate() + '. ' + nameOfMonth + ' ' + date.getFullYear();
 
   // BUTTONS
   // const btn = document.querySelector('.btn-morning');
