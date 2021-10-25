@@ -10,6 +10,7 @@
 
 const functions = require('firebase-functions');
 const app = require('express')();
+const auth = require('./util/auth');
 
 // import methods and after that assign routes to them
 const {
@@ -22,18 +23,22 @@ const {
 const {
     loginUser,
     signUpUser,
-    // getUserDetail
+    getUserDetail,
+    updateUserDetails
 } = require('./APIs/users')
 
 // Medication
-app.get('/medication', getAllMedication);
-app.post('/type', postOneMedication);
-app.delete('/type/:medicationId', deleteMedication);
-app.put('/type/:medicationId', editMedication);
+// adding auth > all the API calls will require a token > can only be accessed by particular user
+app.get('/medication', auth, getAllMedication);
+// app.get('/type/:medicationId', auth, getOneMedication);
+app.post('/type', auth, postOneMedication);
+app.delete('/type/:medicationId', auth, deleteMedication);
+app.put('/type/:medicationId', auth, editMedication);
 
 // Users
 app.post('/login', loginUser);
 app.post('/signup', signUpUser);
-// app.get('/user', auth, getUserDetail);
+app.get('/user', auth, getUserDetail);
+app.post('/user', auth, updateUserDetails);
 
 exports.api = functions.https.onRequest(app);

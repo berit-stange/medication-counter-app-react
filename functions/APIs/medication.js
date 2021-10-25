@@ -4,6 +4,7 @@ const { db } = require('../util/admin');
 exports.getAllMedication = (request, response) => {
     db
         .collection('medication')
+        .where('username', '==', request.user.username)
         .orderBy('createdAt', 'desc')
         .get()
         .then((data) => {
@@ -12,6 +13,7 @@ exports.getAllMedication = (request, response) => {
                 medication.push({
                     medicationId: doc.id,
                     title: doc.data().title,
+                    username: doc.data().username,
                     body: doc.data().body,
                     createdAt: doc.data().createdAt,
                 });
@@ -24,6 +26,7 @@ exports.getAllMedication = (request, response) => {
         });
 };
 
+
 // adding new medication type to list of medication
 exports.postOneMedication = (request, response) => {
     if (request.body.body.trim() === '') {
@@ -35,6 +38,7 @@ exports.postOneMedication = (request, response) => {
 
     const newMedicationType = {
         title: request.body.title,
+        username: request.user.username,
         body: request.body.body,
         createdAt: new Date().toISOString()
     }
@@ -53,7 +57,7 @@ exports.postOneMedication = (request, response) => {
         });
 };
 
-// delet medication type
+// delete medication type
 exports.deleteMedication = (request, response) => {
     const document = db.doc(`/medication/${request.params.medicationId}`);
     document
