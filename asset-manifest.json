@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/medication-counter-app-react/static/css/main.d164c70e.chunk.css",
-    "main.js": "/medication-counter-app-react/static/js/main.799a5c48.chunk.js",
-    "main.js.map": "/medication-counter-app-react/static/js/main.799a5c48.chunk.js.map",
+    "main.css": "/medication-counter-app-react/static/css/main.309eebf3.chunk.css",
+    "main.js": "/medication-counter-app-react/static/js/main.673f3ab5.chunk.js",
+    "main.js.map": "/medication-counter-app-react/static/js/main.673f3ab5.chunk.js.map",
     "runtime-main.js": "/medication-counter-app-react/static/js/runtime-main.d5320af6.js",
     "runtime-main.js.map": "/medication-counter-app-react/static/js/runtime-main.d5320af6.js.map",
     "static/js/2.8d9bf693.chunk.js": "/medication-counter-app-react/static/js/2.8d9bf693.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/medication-counter-app-react/index.html",
     "service-worker.js": "/medication-counter-app-react/service-worker.js",
     "service-worker.js.map": "/medication-counter-app-react/service-worker.js.map",
-    "static/css/main.d164c70e.chunk.css.map": "/medication-counter-app-react/static/css/main.d164c70e.chunk.css.map",
+    "static/css/main.309eebf3.chunk.css.map": "/medication-counter-app-react/static/css/main.309eebf3.chunk.css.map",
     "static/js/2.8d9bf693.chunk.js.LICENSE.txt": "/medication-counter-app-react/static/js/2.8d9bf693.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d5320af6.js",
     "static/js/2.8d9bf693.chunk.js",
-    "static/css/main.d164c70e.chunk.css",
-    "static/js/main.799a5c48.chunk.js"
+    "static/css/main.309eebf3.chunk.css",
+    "static/js/main.673f3ab5.chunk.js"
   ]
 }
