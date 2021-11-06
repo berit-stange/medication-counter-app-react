@@ -12,6 +12,17 @@ const functions = require('firebase-functions');
 const app = require('express')();
 const auth = require('./util/auth');
 
+
+// const express = require('express');
+// const request = require('request');
+// const app = express();
+
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     next();
+// });
+
+
 // import methods and after that assign routes to them
 const {
     getAllMedication,
@@ -40,5 +51,8 @@ app.post('/login', loginUser);
 app.post('/signup', signUpUser);
 app.get('/user', auth, getUserDetail);
 app.post('/user', auth, updateUserDetails);
+
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => console.log(`listening on ${PORT}`));
 
 exports.api = functions.https.onRequest(app);
