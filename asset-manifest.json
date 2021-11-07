@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/medication-counter-app-react/static/css/main.309eebf3.chunk.css",
-    "main.js": "/medication-counter-app-react/static/js/main.42783669.chunk.js",
-    "main.js.map": "/medication-counter-app-react/static/js/main.42783669.chunk.js.map",
+    "main.js": "/medication-counter-app-react/static/js/main.4cd28e9a.chunk.js",
+    "main.js.map": "/medication-counter-app-react/static/js/main.4cd28e9a.chunk.js.map",
     "runtime-main.js": "/medication-counter-app-react/static/js/runtime-main.9e568d4c.js",
     "runtime-main.js.map": "/medication-counter-app-react/static/js/runtime-main.9e568d4c.js.map",
     "static/js/2.39aded0c.chunk.js": "/medication-counter-app-react/static/js/2.39aded0c.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.9e568d4c.js",
     "static/js/2.39aded0c.chunk.js",
     "static/css/main.309eebf3.chunk.css",
-    "static/js/main.42783669.chunk.js"
+    "static/js/main.4cd28e9a.chunk.js"
   ]
 }
