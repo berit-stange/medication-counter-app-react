@@ -7,7 +7,7 @@ const firebase = require('firebase'); //code for firebase@8 !
 firebase.initializeApp(config);
 
 const { validateLoginData, validateSignUpData } = require('../util/validators');
-const { json } = require('express');
+// const { json } = require('express');
 
 // Login
 exports.loginUser = (request, response) => {
