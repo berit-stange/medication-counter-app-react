@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Typography from '@material-ui/core/Typography';
-import Home from './pages/Home';
+// import Typography from '@material-ui/core/Typography';
+// import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 // import './App.css';
@@ -18,13 +18,16 @@ function App() {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={Home} />
-            {/* <Route exact path="/login" component={Login} /> */}
-            <Route path="/login" render={() => {
+            {/* <Route exact path="/" component={Home} /> */}
+            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/login" render={() => {
               return <div>
                 <Login />
               </div>
-            }} />
+            }} /> */}
+            {/* <Route exact path="/login" >
+              <Login />
+            </Route> */}
             <Route exact path="/signup" component={Signup} />
           </Switch>
         </div>
