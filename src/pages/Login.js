@@ -98,7 +98,7 @@ class Login extends Component {
         return (
 
             <Container component="main" maxWidth="xs">
-                <h1>Login.js</h1>
+                {/* <h1>Login.js</h1> */}
 
                 <CssBaseline />
 
@@ -106,9 +106,11 @@ class Login extends Component {
                     <Avatar className={classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
-                    <Typography component="h1" variant="h5">
+                    <h2>Login</h2>
+                    {/* <Typography variant="h2">
                         Login
-                    </Typography>
+                    </Typography> */}
+
                     <form className={classes.form} noValidate>
                         <TextField
                             variant="outlined"

@@ -4,16 +4,17 @@ import Typography from '@material-ui/core/Typography';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import './App.css';
+// import './App.css';
 
 function App() {
 
   return (
     <div>
-      {/* <h1>App.js</h1> */}
-      <Typography variant="h1" noWrap>
+      <h1>Medi App</h1>
+      {/* <Typography variant="h1" noWrap>
         Medi App
-      </Typography>
+      </Typography> */}
+
       <Router>
         <div>
           <Switch>
